@@ -48,4 +48,3 @@ if b'Find Friends' in response_data or b'Two-factor authentication' in response_
     break
 else:
     print('Response Data:', response_data)
-...
