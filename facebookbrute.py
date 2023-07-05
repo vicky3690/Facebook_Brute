@@ -24,7 +24,7 @@ except:
 	print('\n\tPlease install mechanize.\n')
 	sys.exit()
 
-print('\n-----v1.1.3-----Welcome To Facebook_Brute-----coded by:Vicky-----\n')
+print('\n-----v1.1.3-----Welcome To Facebook_Brute-----Coded:Vicky-----\n')
 file=open('passwords.txt','r')
 
 email=str(raw_input('Enter Email/Username : ').strip())
